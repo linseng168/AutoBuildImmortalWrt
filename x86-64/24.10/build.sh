@@ -22,7 +22,7 @@ echo "$(date '+%Y-%m-%d %H:%M:%S') - 开始编译..."
 
 
 # 如果你是编译luci 24的版本，上述代码中 要将luci-i18n-opkg-zh-cn替换为luci-i18n-package-manager-zh-cn 因为新版本里它的名称发生变化
-# 定义所需安装的包列表 下列插件你都可以自行删减
+# 定义所需安装的包列表 下列插件你都可以自行删减,PACKAGES="$PACKAGES luci-app-adguardhome" 这个不行。
 PACKAGES=""
 PACKAGES="$PACKAGES curl"
 PACKAGES="$PACKAGES luci-app-argon-config"
@@ -34,7 +34,7 @@ PACKAGES="$PACKAGES luci-i18n-package-manager-zh-cn"
 PACKAGES="$PACKAGES luci-i18n-ttyd-zh-cn"
 PACKAGES="$PACKAGES luci-i18n-passwall-zh-cn"
 PACKAGES="$PACKAGES luci-app-openclash"
-PACKAGES="$PACKAGES luci-app-adguardhome"
+
 
 # 判断是否需要编译 Docker 插件
 if [ "$INCLUDE_DOCKER" = "yes" ]; then
