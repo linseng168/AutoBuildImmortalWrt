@@ -31,10 +31,9 @@ PACKAGES="$PACKAGES luci-i18n-argon-config-zh-cn"
 #24.10
 PACKAGES="$PACKAGES luci-i18n-firewall-zh-cn"
 PACKAGES="$PACKAGES luci-i18n-package-manager-zh-cn"
-PACKAGES="$PACKAGES luci-i18n-ttyd-zh-cn"
+PACKAGES="$PACKAGES luci-i18n-diskman-zh-cn"
 PACKAGES="$PACKAGES luci-i18n-passwall-zh-cn"
 PACKAGES="$PACKAGES luci-app-openclash"
-
 
 # 判断是否需要编译 Docker 插件
 if [ "$INCLUDE_DOCKER" = "yes" ]; then
